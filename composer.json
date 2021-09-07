@@ -1,0 +1,10 @@
+{
+    "name": "davin/reversi_game",
+    "require-dev": {
+        "phpunit/phpunit": "7"
+    },
+    "scripts": {
+        "start": "php -S localhost:8089",
+        "test": "phpunit"
+    }
+}
