@@ -2,7 +2,7 @@
 use PHPUnit\Framework\TestCase;
 require 'ReversiGame.php';
 
-final class ReversiTest extends TestCase
+final class ReversiGameTest extends TestCase
 {
 	private $reversi;
 
@@ -19,8 +19,9 @@ final class ReversiTest extends TestCase
 			........
 			........";
 		$output =  $this->reversi->BoardSetup($input);
-			// Error: Call to undefined function BoardSetup()
+			// Error: Call to undefined function BoardSetup() - means i need to use $this->variable->function()
 
+		//this currently has custom indenting so that the strings are considered 'equal'
     	$expectedOutput = ". . . . . . . .
 . . . . . . . .
 . . . . o . . .
@@ -30,20 +31,8 @@ final class ReversiTest extends TestCase
 . . . . . . . .
 . . . . . . . .";
 			//havent worked out what board is yet
-		// BUT these will never be equal ie the output board will always be a modiciatino of the input board!
+		// BUT these will never be equal ie the output board will always be a modifiatino of the input board!
     	$this->assertEquals($output, $expectedOutput);
     }
 }
 
-//to run tests from win cmd prompt
-// vendor\bin\phpunit index.test.php
-
-// expected output for 2nd test
-// $expectedOutput = "........
-// 			........
-// 			....0...
-// 			...BW0..
-// 			..0WB...
-// 			...0....
-// 			........
-// 			........";

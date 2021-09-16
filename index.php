@@ -6,17 +6,14 @@
 	</head>
 
 	<body>
-		<h1>Kata Game</h1>
+		<h1>Kata Challenge - Reversi Game</h1>
 
 		<pre>
 		<?php  
 		require 'ReversiGame.php';
-		echo 'hello kata game ';
 
-		
-
-
-		$input = "........
+		$input = "
+			........
 			........
 			........
 			...BW...
@@ -24,11 +21,17 @@
 			........
 			........
 			........";
-		$viewBoard = BoardSetup($input);
-		print_r($viewBoard);
+		
+		print_r("<br>Input Board <br>");
+		print_r($input);
 
+		$reversi = new ReversiGame();
+		// $output =  $this->reversi->BoardSetup($input);
+		$outputBoard = $reversi->BoardSetup($input);
 
-
+		// $viewBoard = BoardSetup($input);
+		print_r("<br>Output Board, of valid moves for Player B <br>");
+		print_r($outputBoard);
 
 		?>
 		</pre>
