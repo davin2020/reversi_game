@@ -1,14 +1,16 @@
-# poker_hands
-Code Kata for playing the game of Reversi. 
+# reversi_game
+Code Kata for the game of Reversi. 
 
-I'm still working through the rules/requirements of the challenge here - https://codingdojo.org/kata/Reversi/
+The challenge is to write a program that takes the current board position as input, and returns a board showing the legal moves available for the current player. The challenge does not involve creating a playable game.
+
+The rules/requirements of the challenge are here - https://codingdojo.org/kata/Reversi/
 
 ## To Setup & Run Locally
 
 1. Clone repo locally then `cd` to the new directory
 2. `composer install`
 3. `composer start`
-4. open `localhost:8093` in a browser
+4. open `localhost:8089` in a browser
 
 
 ## To Run Unit Tests

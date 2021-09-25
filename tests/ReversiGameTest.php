@@ -19,9 +19,9 @@ final class ReversiGameTest extends TestCase
 			........
 			........";
 		$output =  $this->reversi->BoardSetup($input);
-			// Error: Call to undefined function BoardSetup() - means i need to use $this->variable->function()
+		// Error: Call to undefined function BoardSetup() - means i need to use $this->variable->function()
 
-		//this currently has custom indenting so that the strings are considered 'equal'
+		//this currently has custom indenting so that the strings are considered 'equal' when unit testing
     	$expectedOutput = ". . . . . . . .
 . . . . . . . .
 . . . . o . . .
@@ -30,8 +30,7 @@ final class ReversiGameTest extends TestCase
 . . . o . . . .
 . . . . . . . .
 . . . . . . . .";
-			//havent worked out what board is yet
-		// BUT these will never be equal ie the output board will always be a modifiatino of the input board!
+		// Each time test is done with differnt input board, need to work out what the expected output board is, as they will never be equal as output board will always be a modification of the input board, so need to compare actual output with expected output
     	$this->assertEquals($output, $expectedOutput);
     }
 }
