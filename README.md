@@ -1,5 +1,5 @@
 # reversi_game
-Code Kata for playing the game of Reversi. 
+Code Kata for the game of Reversi. 
 
 The challenge is to write a program that takes the current board position as input, and returns a board showing the legal moves available for the current player. The challenge does not involve creating a playable game.
 
@@ -9,12 +9,13 @@ The result of the challenge currently looks like this, with one input and one ou
 
 ![Screenshot of Reversi Game, showing Input Input and resulting Output Board](screenshot_reversi.png)
 
+
 ## To Setup & Run Locally
 
 1. Clone repo locally then `cd` to the new directory
 2. `composer install`
 3. `composer start`
-4. open `localhost:8093` in a browser
+4. open `localhost:8089` in a browser
 
 
 ## To Run Unit Tests
