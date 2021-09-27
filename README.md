@@ -1,7 +1,13 @@
-# poker_hands
+# reversi_game
 Code Kata for playing the game of Reversi. 
 
-I'm still working through the rules/requirements of the challenge here - https://codingdojo.org/kata/Reversi/
+The challenge is to write a program that takes the current board position as input, and returns a board showing the legal moves available for the current player. The challenge does not involve creating a playable game.
+
+The rules/requirements of the challenge are here - https://codingdojo.org/kata/Reversi/
+
+The result of the challenge currently looks like this, with one input and one output board
+
+![Screenshot of Reversi Game, showing Input Input and resulting Output Board](screenshot_reversi.png)
 
 ## To Setup & Run Locally
 
@@ -20,9 +26,7 @@ NB: this is setup in `composer.json` to run with the `--testdox` option to give 
 > phpunit tests --testdox
 
 ReversiGame
- ✔ Success AddSomething
- ✔ Failure example numbers not equals
- ✔ Malformed adding int to array returns error
+ ✔ First Setup
 
 Time: 177 ms, Memory: 4.00 MB
 
@@ -33,7 +37,7 @@ Without `--testdox`, the test output looks like this -
 ```
 > phpunit tests
 
-...                                                                 3 / 3 (100%)
+.                                                                 3 / 3 (100%)
 
 Time: 241 ms, Memory: 4.00 MB
 
