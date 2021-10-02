@@ -1,41 +1,36 @@
 <?php
 class ReversiGame {
 
-	public function BoardSetup($inputBoard) {
+		public function explodeBoard($inputBoard) {
 			$boardArray = [];
-			// $input = "........
-			// 	........
-			// 	........
-			// 	...BW...
-			// 	...WB...
-			// 	........
-			// 	........
-			// 	........";
 			$lines = explode("\n", $inputBoard);
 			// var_dump($lines);
 			foreach ($lines as $line) {
 				//append to end of array, trim remove \r too ie carraige return & tabs etc
 				$boardArray[] = str_split(trim($line)); 
+				//how to remove extra spaces?
 			}
-			// print_r($boardArray); //prints each item in array
-			//modify board array here via another func
-			//need public scope and $this keyword to be able to call below func from here
-			$boardArray = $this->CheckCells($boardArray);
-
-			// TESTS
-			//input & outputs, then write functions
-			//return as string
+			return $boardArray;
+		}
+		public function implodeBoard($boardArray) {
 			$returnedBoard = [];
+			// BUG 2oct21 this doesnt like board with spaces!
 			foreach ($boardArray as $line) {
+				// add a space here ie " " if your input board isnt already spaced, to get a pretty print
 				$returnedBoard[] = implode(" ", $line);
 			}
+			// print_r($boardArray);
+
 			//had to make this \r\n so tests would pass on windows dev env
 			return implode("\r\n", $returnedBoard);
 		}
 
+		//this currently only checks moves for player B, but could pass in vars like currentPlayer and nextPlayer to make it more dynamic
 		public function checkCells($board) {
 			//loop thru array, look for cells with B, then neighbouring cells for W, then blank cells - if found put marker o there
 			// i as index or line number
+
+			// BUG 2oct21 this doesnt like board with spaces!
 			foreach ($board as $i => $line) { //across?
 				foreach ($line as $j => $cell) {
 					if ($cell == "B") {
@@ -62,14 +57,6 @@ class ReversiGame {
 								if ($matchedW && $searchingNextChar != "B" ) {
 									$board[$searchingOffsetY][$searchingOffsetX] = "o";
 								}
-
-								// if ( $board[$i + $k][$j + $m] == "W") {
-								// 	//kepp looking in same direction and look for blank
-								// 	var_dump("original B: at " . $i  ." " .  " " . $j);
-								// 	var_dump("found W in rel to B: " . ($i + $k) ." " . ($j + $m));
-								// 	var_dump("found: " . ($i + $k + $k) . " " . ($j + $m +$m) ." " . $board[$i + $k + $k][$j + $m +$m]);
-								// 	$board[$i + $k + $k][$j + $m +$m] = "o";
-								// }
 							} 
 						}
 						
