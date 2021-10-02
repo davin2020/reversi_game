@@ -22,9 +22,7 @@ NB: this is setup in `composer.json` to run with the `--testdox` option to give 
 > phpunit tests --testdox
 
 ReversiGame
- ✔ Success AddSomething
- ✔ Failure example numbers not equals
- ✔ Malformed adding int to array returns error
+ ✔ First Setup
 
 Time: 177 ms, Memory: 4.00 MB
 
@@ -35,7 +33,7 @@ Without `--testdox`, the test output looks like this -
 ```
 > phpunit tests
 
-...                                                                 3 / 3 (100%)
+.                                                                 3 / 3 (100%)
 
 Time: 241 ms, Memory: 4.00 MB
 
