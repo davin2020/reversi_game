@@ -66,7 +66,3 @@
 
 	</body>
 </html>
-
-<!-- tidied code, updated readme, add that i did this with my tech mentor -->
-<!-- had to make separete prettyInput as seems output was being create incorretlly due to extra spaces in input array that just make it look pretty - 
-consider having implode and explode as sep funcs to call whenever needed, then seprate func to setupBoard and checkForValidMoves etc -->
