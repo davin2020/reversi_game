@@ -8,6 +8,6 @@
         "test": "phpunit tests --testdox"
     },
     "config": {
-    	"process-timeout": 2000
+    	"process-timeout": 4000
     }
 }
