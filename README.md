@@ -5,9 +5,9 @@ The challenge is to write a program that takes the current board position as inp
 
 The rules/requirements of the challenge are here - https://codingdojo.org/kata/Reversi/
 
-The result of the challenge currently looks like this, with one input and one output board
+The result of the challenge currently looks like this, with separate input and output boards for the first and second moves of Player B
 
-![Screenshot of Reversi Game, showing Input Input and resulting Output Board](screenshot_reversi.png)
+![Image of Reversi Game with 2 Moves of Player B](reversi_2_moves.png)
 
 
 ## To Setup & Run Locally
@@ -27,20 +27,21 @@ NB: this is setup in `composer.json` to run with the `--testdox` option to give 
 > phpunit tests --testdox
 
 ReversiGame
- ✔ First Setup
+ ✔ First move
+ ✔ Second move
 
 Time: 177 ms, Memory: 4.00 MB
 
-OK (3 tests, 3 assertions)
+OK (2 tests, 2 assertions)
 ```
 
 Without `--testdox`, the test output looks like this - 
 ```
 > phpunit tests
 
-.                                                                 3 / 3 (100%)
+. .                                                                2 / 2 (100%)
 
 Time: 241 ms, Memory: 4.00 MB
 
-OK (3 tests, 3 assertions)
+OK (2 tests, 2 assertions)
 ```
